@@ -1,0 +1,368 @@
+div.mainContainer {
+  height: 90%;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-around;
+  background: #ad5389; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #3c1053,
+    #ad5389
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #3c1053,
+    #ad5389
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+div.mainContainer div.rightSide {
+  width: 25%;
+  height: 2720px;
+  border-radius: 8px;
+}
+div.mainContainer div.leftSide {
+  padding: 12px 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  width: 55%;
+  height: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  border: 2px solid #008b8b;
+}
+div.rightSide div.advertisement {
+  width: 100%;
+  margin: 6px 8px;
+  height: 275px;
+  border: 2px solid #2e8b57;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+}
+div.advertisement div.banner {
+  height: 170px;
+  width: 100%;
+  background-color: #ffa500;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+div.banner img {
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+div.advertisement div.title h4 {
+  font-size: 1.3em;
+  color: #800000;
+  font-weight: 800;
+  margin: 7px 6px;
+}
+div.advertisement button {
+  padding: 4px 0;
+  width: 96%;
+  margin: 8px 7px;
+  font-size: 1.3em;
+  border-radius: 8px;
+  color: #f5f5f5;
+  background-color: #4169e1;
+  border: 2px solid #ffa500;
+  transition: all 0.4s;
+}
+div.advertisement button:hover {
+  background-color: #2c4aa4;
+  cursor: pointer;
+}
+div.rightSide div.allBlogs {
+  position: sticky;
+  top: 10px;
+  background-color: #add8e6;
+  border-radius: 8px;
+  border: 2px solid #2e8b57;
+  height: 428px;
+  width: 100%;
+  margin: 26px 8px;
+  padding: 6px 4px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+div.allBlogs h3 {
+  color: #ff4500;
+  margin: 4px 0 6px 0;
+  text-align: center;
+  padding-bottom: 6px;
+  border-bottom: 2px solid red;
+}
+div.allBlogs div.container {
+  /* background-color: #be2745; */
+  width: 98%;
+  height: 120px;
+  margin: 6px 4px;
+  display: flex;
+  border-radius: 8px;
+  transition: all 0.4s;
+}
+div.allBlogs div.container:hover {
+  background-color: #931b33;
+  cursor: pointer;
+}
+div.container div.banner {
+  width: 150px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+div.container div.title {
+  display: flex;
+  align-items: center;
+}
+div.container div.title p {
+  margin: 0 6px;
+  color: #f5f5f5;
+  font-size: 0.9em;
+  font-weight: 700;
+}
+div.container:hover div.title p {
+  text-decoration: underline;
+}
+div.container div.banner img {
+  width: 150px;
+  height: 100%;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-top-left-radius: 0;
+}
+div.leftSide div.first {
+  width: 100%;
+  height: 320px;
+  border-radius: 8px;
+  border: 3px solid #ff4500;
+}
+div.first img {
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+}
+
+div.leftSide div.second {
+  margin: 15px 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+div.second div.title h2 {
+  color: #663399;
+  font-size: 2.1em;
+}
+div.second div.view {
+  padding: 0 4px;
+  border-radius: 8px;
+  border: 2px solid #ff4500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 30px;
+}
+div.second div.view h4 {
+  font-size: 0.9em;
+  margin: 0 8px;
+  color: #b20101;
+}
+div.leftSide div.third {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+div.third div.child {
+  margin: 3px 4px;
+  padding: 3px 7px;
+  width: fit-content;
+  border: 2px solid #ff4500;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s;
+}
+div.third div.child:nth-child(3):hover,
+div.third div.child:nth-child(4):hover {
+  background-color: #ff4500;
+  cursor: pointer;
+}
+div.third div.child:nth-child(3):hover p,
+div.third div.child:nth-child(4):hover p {
+  color: #f5f5f5;
+}
+div.child p {
+  font-weight: 700;
+  margin: 3px;
+  color: #b20101;
+  font-size: 0.7em;
+}
+div.leftSide div.forth {
+  margin: 15px 0;
+  display: flex;
+  width: 100%;
+  padding: 4px 3px;
+}
+div.forth h4 {
+  color: #663399;
+  margin: 6px 0;
+}
+div.forth div.subjects {
+  margin: 0 6px;
+  display: flex;
+  width: 80%;
+  justify-content: flex-start;
+}
+div.subjects p {
+  font-size: 0.9em;
+  margin-left: 8px;
+  padding: 4px 6px;
+  border-radius: 8px;
+  background-color: darkred;
+  color: #f5f5f5;
+  border: 3px solid #000080;
+  margin-bottom: 6px;
+}
+div.fifth {
+  text-indent: 30px;
+}
+div.fifth,
+div.seventh {
+  text-align: justify;
+  font-size: 1.1em;
+}
+div.leftSide div.sixth {
+  margin: 60px auto;
+  border: 2px solid #ff4500;
+  border-radius: 8px;
+  height: 450px;
+  width: 92%;
+  display: flex;
+  flex-flow: column wrap;
+}
+div.sixth h3 {
+  margin: 8px;
+  text-align: center;
+  color: #663399;
+}
+div.sixth div.slide {
+  position: relative;
+  display: flex;
+  flex-flow: column wrap;
+  margin: 8px auto;
+  width: 94%;
+  height: 300px;
+  border-radius: 8px;
+  border: 4px solid #663399;
+}
+div.slide img {
+  width: 100%;
+  height: 100%;
+}
+div.slide button {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #000080;
+  background-color: #dc3c5c;
+  border-radius: 50px;
+  transition: all 0.4s;
+}
+div.slide button:hover {
+  background-color: #d01238;
+  cursor: pointer;
+}
+div.slide button.rightBtn {
+  top: 40%;
+  right: 6px;
+}
+div.slide button.leftBtn {
+  top: 40%;
+  left: 6px;
+}
+div.sixth div.menu {
+  margin: 8px auto;
+  display: flex;
+  flex-flow: row-reverse wrap;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: 60px;
+  /* border-radius: 8px;
+  border: 2px solid #b20101; */
+}
+div.menu div.option {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #ff4500;
+  border-radius: 8px;
+  margin: 0 4px;
+  transition: all 0.4s;
+}
+div.option img {
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+}
+div.menu div.option:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+div.leftSide div.eighth {
+  margin: 70px 0;
+  border-radius: 8px;
+  border: 2px solid #000080;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div.eighth div.child {
+  margin: 3px 4px;
+  padding: 3px 7px;
+  width: fit-content;
+  border: 2px solid #ff4500;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s;
+}
+div.eighth div.child:hover {
+  background-color: #ff4500;
+  cursor: pointer;
+}
+div.eighth h4 {
+  color: #ff0000;
+}
+div.leftSide div.pageBtn {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+div.pageBtn button {
+  font-size: 1.2em;
+  width: 30%;
+  padding: 6px 0;
+  border-radius: 8px;
+  color: #f5f5f5;
+  background-color: #00bfff;
+  border: 2px solid #000080;
+  transition: all 0.4s;
+}
+div.pageBtn button:hover {
+  background-color: #0482ab;
+  cursor: pointer;
+}
+.Liked {
+  background-color: #008b8b;
+}
+.Disliked {
+  background-color: #ff0000;
+}

@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="logo">
+    <img
+      src="../../assets/images/logo.png"
+      alt="Logo"
+      draggable="false"
+      routerLink="/Home"
+    />
+    <h3>آکادمی آدلین</h3>
+  </div>
+  <div class="communicates">
+    <h4>ارتباط با ما:</h4>
+    @for (c of communication; track $index) {
+    <a draggable="false" href="#"
+      ><img [src]="c.img" [alt]="c.title" [title]="c.title" draggable="false"
+    /></a>
+    }
+  </div>
+  <div class="Newsletter">
+    <h4>جهت عضویت در خبرنامه ، ایمیل خود را وارد کنید:</h4>
+    <input type="text" placeholder="example@gmile.com" #newsletter />
+    <button type="button" (click)="signupNewsletter()">ثبت ایمیل</button>
+    @if (showNotification) {
+    <div class="notification"><h4>شما اکنون عضو خبرنامه هستید!</h4></div>
+    }
+  </div>
+  <div class="links">
+    <h3>دسترسی سریع به بخش های مختلف :</h3>
+    <div class="linksContainer">
+      @for (l of links; track $index) {
+      <div class="link">
+        @if ($index <=6) {
+        <a [routerLink]="l.link" [title]="l.title" draggable="false">{{
+          l.title
+        }}</a>
+        } @else {
+        <a
+          [routerLink]="l.link"
+          [fragment]="l.fragment"
+          [title]="l.title"
+          draggable="false"
+          >{{ l.title }}</a
+        >
+        }
+      </div>
+      <br />
+      }
+    </div>
+  </div>
+</div>

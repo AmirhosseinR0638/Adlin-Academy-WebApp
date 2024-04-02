@@ -1,0 +1,203 @@
+div.container {
+  width: 100%;
+  height: 100%;
+  background: #a8ff78; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #78ffd6,
+    #a8ff78
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #78ffd6,
+    #a8ff78
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+div.container h1 {
+  text-align: center;
+  color: #000080;
+  margin: 6px 0;
+}
+div.container div.courseContainer {
+  display: flex;
+  flex-flow: row wrap;
+}
+div.courseContainer div.courses {
+  width: 82%;
+  height: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  /* border-right: 1px solid #8b0000; */
+}
+div.courses div.course {
+  border-radius: 8px;
+  width: 300px;
+  height: 518px;
+  margin: 4px 5px;
+  display: flex;
+  flex-flow: column wrap;
+  background-color: #ff9900;
+  border: 2px solid #000080;
+  transition: all 0.4s;
+}
+div.courses div.course:hover {
+  z-index: 3;
+  transform: scale(1.05);
+  cursor: pointer;
+}
+div.course div.banner {
+  width: 100%;
+  height: 170px;
+  position: relative;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  margin-bottom: 10px;
+}
+div.banner img {
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+div.banner div.discount {
+  font-weight: 800;
+  background-color: #e20505;
+  color: #f5f5f5;
+  border: 2px solid #ffff00;
+  margin: 8px;
+  text-align: center;
+  width: 38px;
+  height: 38px;
+  padding: 7px 0;
+  border-radius: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+div.course div.title h4 {
+  color: #f5f5f5;
+  font-size: 1.1em;
+  font-weight: 800;
+}
+div.course div.teachers p {
+  font-size: 0.9em;
+  font-weight: 700;
+  color: #000080;
+}
+div.course div.statics {
+  display: flex;
+  justify-content: space-between;
+}
+div.statics div.satisfaction p,
+div.statics div.duration p {
+  font-size: 0.73em;
+  color: #8b0000;
+}
+div.course div:not(div.banner, div.discount) {
+  margin: 0 4px;
+}
+div.course div.description p {
+  font-size: 1em;
+  color: #f5f5f5;
+}
+div.course div.price del {
+  color: #8b0000;
+  font-size: 1.1em;
+  font-weight: 700;
+}
+div.course div.price h5 {
+  color: #9fff3f;
+  font-size: 1.3em;
+}
+div.course div.btn {
+  display: flex;
+  justify-content: space-around;
+  padding: 16px 0;
+}
+div.btn button {
+  width: 49%;
+  border-radius: 8px;
+  border: 2px solid #f5f5f5;
+  color: #f5f5f5;
+  font-size: 1em;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+div.btn button#buy {
+  background-color: #2e8b57;
+}
+div.btn button#buy:hover {
+  background-color: #19683b;
+}
+div.btn button#info {
+  background-color: #00bfff;
+}
+div.btn button#info:hover {
+  background-color: #018dbb;
+}
+div.container div.filterBox {
+  position: sticky;
+  top: 0;
+  width: 18%;
+  height: 400px;
+}
+div.filterBox div.searchBox {
+  width: 100%;
+}
+div.filterBox div.searchBox input {
+  width: 97%;
+  margin: 8px auto;
+  padding: 5px 4px;
+  border-radius: 8px;
+  border: 2px solid #000080;
+  outline: none;
+}
+div.filterBox div.searchBox input:focus {
+  border: 2px solid #2e8b57;
+}
+div.filterBox div.filters {
+  display: flex;
+  flex-flow: column wrap;
+  padding: 6px 4px;
+}
+div.filterBox h4 {
+  color: #000080;
+  font-size: 1.1em;
+}
+div.filters div.sort {
+  margin: 3px 12px;
+  display: flex;
+  flex-flow: column wrap;
+}
+div.sort div.inside {
+  margin: 3px 0;
+}
+div.inside label {
+  padding: 0 3px;
+  cursor: pointer;
+  color: #800000;
+  font-size: 1em;
+  font-weight: 500;
+}
+div.inside input {
+  accent-color: #000080;
+  cursor: pointer;
+}
+
+div.filters div.filtering select {
+  color: #800000;
+  width: 96%;
+  margin: 10px auto;
+  text-align: center;
+  font-size: 1em;
+  padding: 4px 0;
+  border-radius: 8px;
+  border: 2px solid #000080;
+  outline: none;
+  cursor: pointer;
+}
+div.filterBox h4 span {
+  color: #800000;
+  font-weight: 500;
+}

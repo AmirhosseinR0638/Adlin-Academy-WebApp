@@ -1,0 +1,114 @@
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,100,0,0"
+/>
+<div class="main">
+  @if (showNotification) {
+  <div class="notification">
+    @switch (userStatus) { @case ('signedUp') {
+    <div class="signUp">
+      <p>
+        {{ usernameCopy }} عزیز خوشحالیم از اینکه شما اکنون عضو آکادمی آدلین
+        هستید.
+      </p>
+    </div>
+    } @case('signedIn') {
+    <div class="signIn">
+      <p>{{ usernameCopy }} خوش آمدید.</p>
+    </div>
+    } @case('notFound'){
+    <div class="notFound">
+      <p>
+        کاربری با نام {{ usernameCopy }} وجود ندارد. لطفا از صحت اطلاعات اطمینان
+        حاصل کنید.
+      </p>
+    </div>
+    } }
+  </div>
+
+  }
+  <div class="container">
+    <div class="logo">
+      <img
+        draggable="false"
+        src="../../assets/images/logo.png"
+        alt="آکادمی آدلین"
+        title="آکادمی آدلین"
+      />
+      <h2>آکادمی آدلین</h2>
+    </div>
+    <div class="formContainer">
+      <div class="menu">
+        <button
+          type="button"
+          [ngClass]="{
+            isActivate: section == 'Sign in',
+            isDeactivate: section == 'Sign up'
+          }"
+          (click)="selectSection('Sign in')"
+        >
+          ورورد
+        </button>
+        <button
+          type="button"
+          [ngClass]="{
+            isActivate: section == 'Sign up',
+            isDeactivate: section == 'Sign in'
+          }"
+          (click)="selectSection('Sign up')"
+        >
+          ثبت نام
+        </button>
+      </div>
+      @switch (section) { @case ('Sign up') {
+      <form [formGroup]="signUpForm" (ngSubmit)="signUpFormSubmitted()">
+        <div class="form">
+          <input
+            type="text"
+            placeholder="نام کاربری"
+            formControlName="username"
+          />
+          @if (signUpForm.get('username').touched &&
+          signUpForm.get('username').invalid) {
+          <p class="Error">نام کاربری باید بیشتر از 6 کاراکتر باشد!</p>
+          }
+          <input
+            type="password"
+            placeholder="رمز ورورد"
+            formControlName="password"
+          />
+          @if (signUpForm.get('password').touched &&
+          signUpForm.get('password').invalid) {
+          <p class="Error">رمز ورود باید بیشتر از 8 کاراکتر باشد!</p>
+          }
+          <input type="email" placeholder="ایمیل" formControlName="email" />
+          @if (signUpForm.get('email').touched &&
+          signUpForm.get('email').invalid) {
+          <p class="Error">لطفا ایمیل معتبر وارد کنید!</p>
+          }
+          <button type="submit" [disabled]="signUpForm.invalid">ثبت نام</button>
+        </div>
+      </form>
+      } @default {
+      <form [formGroup]="signInForm" (ngSubmit)="signInFormSubmitted()">
+        <div class="form">
+          <input
+            type="text"
+            placeholder="نام کاربری"
+            formControlName="username"
+          />
+          <input
+            type="password"
+            placeholder="رمز ورورد"
+            formControlName="password"
+          />
+          <p id="forgotPassword">
+            <a (click)="restorePassword()">رمز عبور خودرا فراموش کرده اید؟</a>
+          </p>
+          <button type="submit" [disabled]="signInForm.invalid">ورورد</button>
+        </div>
+      </form>
+      } }
+    </div>
+  </div>
+</div>

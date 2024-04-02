@@ -1,0 +1,135 @@
+<div class="container">
+  <h1>دوره ها</h1>
+  <div class="courseContainer">
+    <div class="filterBox">
+      <div class="searchBox">
+        <h4>جستجوی دوره:</h4>
+        <input
+          type="text"
+          placeholder="دوره مورد نظر شما"
+          (keyup)="searchCourse($event)"
+          [(ngModel)]="searchedCourse"
+        />
+      </div>
+      <div class="filters">
+        <h4>نمایش دوره ها براساس:</h4>
+        <div class="sort">
+          <div class="inside">
+            <input
+              type="radio"
+              name="sort"
+              id="s1"
+              value="mostExpensive"
+              (change)="sortCourse($event)"
+            />
+            <label for="s1">گران ترین دوره ها</label>
+          </div>
+          <div class="inside">
+            <input
+              type="radio"
+              name="sort"
+              id="s2"
+              value="leastExpensive"
+              (change)="sortCourse($event)"
+            />
+            <label for="s2">ارزان ترین دوره ها</label>
+          </div>
+          <div class="inside">
+            <input
+              type="radio"
+              name="sort"
+              id="s3"
+              value="mostPopular"
+              (change)="sortCourse($event)"
+            />
+            <label for="s3">محبوبترین دوره ها</label>
+          </div>
+        </div>
+        <div class="filtering">
+          <h4>فیلترکردن دوره ها براساس موضوع:</h4>
+          <select name="select" (change)="filterCourses($event)">
+            <option value="هیچکدام">هیچکدام</option>
+            <option value="برنامه نویسی">برنامه نویسی</option>
+            <option value="دروس دانشگاهی">دروس دانشگاهی</option>
+            <option value="وب">توسعه وب</option>
+            <option value="فرانت اند">فرانت اند</option>
+            <option value="بک اند">بک اند</option>
+            <option value="نرم افزار">نرم افزار</option>
+            <option value="سخت افزار">سخت افزار</option>
+            <option value="طراحی">طراحی</option>
+          </select>
+        </div>
+      </div>
+      <div class="results">
+        @if (isInputFocused) {
+        <h4>
+          تعداد دوره های یافت شده: <span>{{ courses.length }}</span>
+        </h4>
+        } @else{
+        <h4>
+          تعداد کل دوره ها: <span>{{ courses.length }}</span>
+        </h4>
+        }
+      </div>
+    </div>
+    <div class="courses">
+      @for (c of courses; track $index) {
+      <div class="course" [routerLink]="'/courses/course/' + c.id">
+        <div class="banner">
+          <div class="discount">
+            <p>{{ c.discountPercent + "%" }}</p>
+          </div>
+          <img [src]="c.banner" [alt]="c.title" [title]="c.title" draggable="false"/>
+        </div>
+        <div class="title">
+          <h4>{{ c.title }}</h4>
+        </div>
+        <div class="teachers">
+          <p>
+            مدرسین: @for (t of c.teachers; track $index) {
+            <span>{{ t }}</span> @if (c.teachers.length>1 && c.teachers.length
+            !=$index+1) { <span>، </span> } }
+          </p>
+        </div>
+        <div class="statics">
+          <div class="satisfaction">
+            <p>رضایت خریداران دوره: {{ "%" + c.satisfaction }}</p>
+          </div>
+          <div class="duration">
+            <p>مدت زمان دوره: {{ c.duration + " ساعت" }}</p>
+          </div>
+        </div>
+        <div class="description">
+          <p>
+            توضیحی مختصر درباره دوره: <br />{{
+              c.description.substring(0, 149)
+            }}است.
+          </p>
+        </div>
+        <div class="price">
+          <del>{{ c.mainPrice }}</del>
+          <h5>{{ c.priceWithDiscount }} تومان</h5>
+        </div>
+
+        <div class="btn">
+          <button
+            type="button"
+            id="buy"
+            [routerLink]="'/courses/course/' + c.id + '/payment'"
+            [state]="c"
+          >
+            خرید
+          </button>
+          <button
+            type="button"
+            id="info"
+            [routerLink]="'/courses/course/' + c.id"
+          >
+            مشاهده جزییات
+          </button>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+</div>

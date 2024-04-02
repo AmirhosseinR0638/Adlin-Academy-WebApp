@@ -1,0 +1,17 @@
+<nav>
+  <ul>
+    <li routerLink="Home" routerLinkActive="activeRoute"><a>صفحه اصلی</a></li>
+    <li routerLink="courses" routerLinkActive="activeRoute"><a>دوره ها</a></li>
+    <li routerLink="Blogs" routerLinkActive="activeRoute"><a>بلاگ ها</a></li>
+    <li routerLink="Teachers" routerLinkActive="activeRoute"><a>مدرسین</a></li>
+    <li routerLink="Contact" routerLinkActive="activeRoute">
+      <a>ارتباط با ما</a>
+    </li>
+    <div class="other">
+      <li routerLink="Login" routerLinkActive="activeRoute"><a>ورود</a></li>
+      <li routerLink="Login" [queryParams]="{ LoggedIn: false }" (click)="logOut()">
+        <a>خروج</a>
+      </li>
+    </div>
+  </ul>
+</nav>

@@ -1,0 +1,403 @@
+div.mainContainer {
+  display: flex;
+  flex-flow: row wrap;
+}
+div.mainContainer div.first {
+  width: 100%;
+  background-color: #6495ed;
+  display: flex;
+  flex-flow: column wrap;
+  height: 600px;
+}
+div.first div.intro {
+  display: flex;
+  flex-flow: column wrap;
+}
+div.intro div.logo,
+div.first div.searchBox {
+  text-align: center;
+}
+div.logo img {
+  width: 370px;
+  height: 370px;
+}
+div.logo img:hover {
+  cursor: pointer;
+}
+div.intro div.text {
+  padding: 0 25px;
+}
+div.intro div.text p {
+  color: #f5f5f5;
+  font-size: 1.1em;
+  text-align: center;
+  font-weight: 600;
+  text-align: justify;
+}
+div.searchBox input {
+  font-size: 1.2em;
+  margin: 30px 0 0 0;
+  width: 25%;
+  padding: 3px 10px;
+  border-radius: 8px;
+  border: 3px solid #ff4500;
+  transition: all 0.4s;
+}
+div.searchBox input:focus {
+  width: 30%;
+  outline: none;
+}
+div.searchBox input:focus:valid {
+  border: 3px solid #2e8b57;
+}
+div.searchBox button {
+  width: 8%;
+  padding: 3px 5px;
+  font-size: 1.2em;
+  background-color: #483d8b;
+  color: #f5f5f5;
+  border: 3px solid #ff4500;
+  border-radius: 8px;
+  margin-right: 6px;
+  transition: all 0.4s;
+}
+div.searchBox button:hover {
+  border: 3px solid #f5f5f5;
+  cursor: pointer;
+  background-color: #3b3276;
+}
+div.searchBox button:disabled {
+  border: 3px solid #ff4500;
+  background-color: #7b6fca;
+  cursor: not-allowed;
+}
+div.searchBox span {
+  font-size: 1.2em;
+  color: #f6bd00;
+  position: relative;
+  top: 6px;
+  right: -120px;
+}
+div.second {
+  background-color: #ff7f50;
+  height: 1400px;
+}
+div.second h3 {
+  margin: 10px 0;
+  text-align: center;
+  font-size: 1.5em;
+  color: #f5f5f5;
+  font-weight: bold;
+}
+div.courseContainer {
+  margin: 10px 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+}
+div.courseContainer div.coursesDiv {
+  background-color: #7b6fca;
+  width: 20%;
+  height: 580px;
+  margin: 20px 40px;
+  display: flex;
+  flex-flow: column wrap;
+  border: 3px solid #f6bd00;
+  border-radius: 12px;
+  transition: all 0.4s;
+}
+div.courseContainer div.coursesDiv:hover {
+  cursor: pointer;
+  background-color: #564d94;
+  transform: scale(1.1);
+}
+div.coursesDiv div.course div.banner {
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
+  overflow: hidden;
+  width: 100%;
+  height: 200px;
+}
+div.banner img {
+  object-fit: cover;
+  width: 100%;
+  height: 200px;
+}
+div.course div.information {
+  margin: 4px 8px;
+}
+div.information h4 {
+  font-size: 1.2em;
+  color: #f5f5f5;
+}
+div.information h5,
+span.explainer {
+  color: #f6bd00;
+  font-weight: 600;
+}
+
+div.information div.description {
+  font-size: 1.1em;
+  color: #f5f5f5;
+  text-align: justify;
+}
+div.information div.price div.inside {
+  margin: 12px 0;
+  display: flex;
+  flex-flow: row-reverse wrap;
+  justify-content: space-between;
+}
+div.information div.price div.discountPercent {
+  border: 2px solid #f6bd00;
+  border-radius: 50px;
+  background-color: #f61500;
+  padding: 6px 3px;
+  width: fit-content;
+  height: 100%;
+}
+div.discountPercent p {
+  color: #f5f5f5;
+  text-align: center;
+  font-size: 1.1em;
+  font-weight: 500;
+}
+div.inside div.finalPrice {
+  display: flex;
+  flex-flow: column wrap;
+}
+div.inside div.finalPrice del {
+  font-size: 1.1em;
+  color: #a52a2a;
+}
+div.inside div.finalPrice h5 {
+  color: chartreuse;
+  font-size: 1.5em;
+}
+div.buttons button {
+  width: 48%;
+  margin: 4px 2px;
+  padding: 3px 4px;
+  font-size: 1.1em;
+  border-radius: 10px;
+  transition: all 0.4s;
+}
+button#buy {
+  background-color: #2e8b57;
+  color: #f5f5f5;
+  border: 2px solid #f5f5f5;
+}
+div.buttons button#buy:hover {
+  background-color: #1e6b3f;
+  cursor: pointer;
+}
+button#moreInfo {
+  background-color: #1e90ff;
+  color: #f5f5f5;
+  border: 2px solid #f5f5f5;
+}
+div.buttons button#moreInfo:hover {
+  background-color: #115ba5;
+  cursor: pointer;
+}
+div.second button#seeAllCourses,
+div.third button#showAllBlogs,
+div.fourth button#seeAllTeachers {
+  color: #f5f5f5;
+  background-color: #9fcb00;
+  font-size: 1.4em;
+  width: 50%;
+  position: relative;
+  right: 380px;
+  padding: 6px 8px;
+  margin: 25px 0;
+  border-radius: 8px;
+  border: 2px solid #1e6b3f;
+  transition: all 0.4s;
+}
+div.second button#seeAllCourses:hover {
+  background-color: #73cb00;
+  cursor: pointer;
+}
+div.third {
+  padding: 8px 10px;
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  background-color: lightblue;
+}
+div.third h3 {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #a52a2a;
+  text-align: center;
+}
+div.third h4 {
+  color: #ff4500;
+  font-size: 1.2em;
+  font-weight: 700;
+}
+div.third div.recentBlogs,
+div.fourth div.teachers {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+div.recentBlogs div.blog {
+  background-color: #c52ac5;
+  height: 480px;
+  width: 300px;
+  display: flex;
+  flex-flow: column wrap;
+  border: 2px solid;
+  border-radius: 8px;
+  border: 2px solid #f61500;
+  transition: all 0.4s;
+}
+div.recentBlogs div.blog:hover {
+  background-color: #a021a0;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+div.blog div.banner {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  width: 100%;
+  height: 150px;
+}
+div.banner img {
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+div.blog h4 {
+  color: #f5f5f5;
+  font-size: 1.4em;
+  font-weight: 800;
+  margin: 4px 8px;
+}
+div.blog h5 {
+  color: #f6bd00;
+  font-size: 0.9em;
+  font-weight: 600;
+  margin: 0 8px;
+}
+div.blog div.blogStatics {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+div.blogStatics div {
+  margin: 2px 8px;
+  padding: 3px 4px;
+  font-size: 1.2em;
+  color: pink;
+  vertical-align: middle;
+}
+div.blog div.summary {
+  padding: 3px 5px;
+}
+div.summary p {
+  color: #f5f5f5;
+  text-align: justify;
+}
+div.blog button {
+  width: 94%;
+  margin: 16px auto;
+  padding: 4px 3px;
+  color: #f5f5f5;
+  background-color: #6495ed;
+  border: 2px solid #f5f5f5;
+  border-radius: 8px;
+  transition: all 0.4s;
+}
+div.blog button:hover {
+  cursor: pointer;
+  background-color: #3f68b3;
+}
+div.third button#showAllBlogs {
+  background-color: #f61500;
+  border: 2px solid #000080;
+}
+div.third button#showAllBlogs:hover {
+  background-color: #b70f00;
+  cursor: pointer;
+}
+div.fourth {
+  width: 100%;
+  height: 730px;
+  background-color: #90ee90;
+}
+div.fourth h3 {
+  text-align: center;
+  font-size: 1.5em;
+  color: #000080;
+  margin: 6px 0;
+}
+div.fourth div.teachers {
+  margin: 45px 0;
+  height: 500px;
+}
+div.teachers div.teacher {
+  border-radius: 8px;
+  border: 2px solid #f61500;
+  width: 270px;
+  height: 420px;
+  display: flex;
+  flex-flow: column wrap;
+  background-color: #20b2aa;
+  transition: all 0.4s;
+  cursor: default;
+  padding: 0 3px;
+}
+div.teachers div.teacher:hover {
+  background-color: #1a8983;
+  transform: scale(1.2);
+}
+div.teacher div.profilePicture {
+  width: 100%;
+  height: 130px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+div.profilePicture img {
+  border-radius: 50px;
+  width: 105px;
+  height: 105px;
+  margin: 0 auto;
+}
+div.teacher h4 {
+  font-size: 1.3em;
+  color: #f5f5f5;
+  text-align: center;
+  font-weight: 800;
+}
+div.teacher div.infographic p {
+  font-size: 1.1em;
+  font-weight: 500;
+  color: #f5f5f5;
+  padding: 3px 6px;
+  text-align: justify;
+  margin: 10px 0;
+}
+div.infographic p span {
+  color: #f6bd00;
+  font-weight: 900;
+}
+div.fourth button#seeAllTeachers {
+  margin: 2px;
+  background-color: #483d8b;
+  color: #f5f5f5;
+  border-color: #f62d00;
+  transition: all 0.4s;
+}
+div.fourth button#seeAllTeachers:hover {
+  background-color: #352c6d;
+  cursor: pointer;
+}

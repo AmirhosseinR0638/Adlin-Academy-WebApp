@@ -1,0 +1,131 @@
+@if (shownCourse!= null) {
+<div class="container">
+  <div class="other">
+    <div class="advertisement">
+      <div class="banner">
+        <img
+          src="../../../assets/images/adv1.gif"
+          alt="تبلیغات"
+          title="تبلیغات"
+          draggable="false"
+        />
+      </div>
+      <div class="title">
+        <h4>با سایت ساز آذرآنلاین، آسان و سریع وب سایت بسازید!</h4>
+      </div>
+      <button type="button">دیدن آگهی</button>
+    </div>
+    <div class="recommended">
+      <h3>دوره های پیشنهادی</h3>
+      @for (c of recommendedCourse; track $index) {
+      <div class="course" [routerLink]="'/courses/course/' + c.id">
+        <div class="banner">
+          <div class="discount">{{ c.discountPercent + "%" }}</div>
+          <img
+            [src]="c.banner"
+            [alt]="c.title"
+            [title]="c.title"
+            draggable="false"
+          />
+        </div>
+        <div class="bottomSide">
+          <div class="title">
+            <h5>{{ c.title }}</h5>
+          </div>
+          <div class="price">
+            <p>{{ c.priceWithDiscount }} تومان</p>
+            <del>{{ c.mainPrice }}</del>
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+  <div class="courseDetail">
+    <div class="banner">
+      <div class="discount">{{ shownCourse.discountPercent + "%" }}</div>
+      <img
+        [src]="shownCourse.banner"
+        [alt]="shownCourse.title"
+        [title]="shownCourse.title"
+        draggable="false"
+      />
+    </div>
+    <div class="title">
+      <h3>{{ shownCourse.title }}</h3>
+    </div>
+    <div class="teachers">
+      @if(shownCourse.teachers.length == 1){
+      <p>
+        استاد: @for(t of shownCourse.teachers;track $index){
+        <span>{{ t }} </span>
+        }
+      </p>
+      } @else {
+      <p>
+        اساتید: @for(t of shownCourse.teachers;track $index){
+        <span
+          >@if ((t.length != $index+1) && ($index!=0)) {
+          <span>، </span>
+          }{{ t }}
+        </span>
+        }
+      </p>
+      }
+    </div>
+    <div class="statics">
+      <div class="duration">
+        <p>
+          مدت زمان دوره: <span>{{ shownCourse.duration }}ساعت</span>
+        </p>
+      </div>
+      <div class="satisfaction">
+        <p>
+          درصد رضایت خریداران دوره:
+          <span>{{ "%" + shownCourse.satisfaction }}</span>
+        </p>
+      </div>
+    </div>
+    <div class="categories">
+      <div class="intro">دسته بندی ها:</div>
+      @for (c of shownCourse.categories; track $index) {
+      <div class="subject">{{ c }}</div>
+      }
+    </div>
+    <div class="description">
+      <p>{{ shownCourse.description }}</p>
+    </div>
+    <div class="buy">
+      <div class="prices">
+        <p>{{ shownCourse.priceWithDiscount }} تومان</p>
+        <del>{{ shownCourse.mainPrice }}</del>
+      </div>
+      <button
+        type="button"
+        [routerLink]="'/courses/course/' + shownCourse.id + '/payment'"
+        [state]="shownCourse"
+      >
+        خرید دوره
+      </button>
+    </div>
+    <div class="pageBtn">
+      <button
+        [hidden]="shownCourse.id == courseService.courses.length"
+        type="button"
+        [routerLink]="'/courses/course/' + (shownCourse.id + 1)"
+      >
+        دوره بعدی
+      </button>
+      <button
+        [hidden]="shownCourse.id == 1"
+        type="button"
+        [routerLink]="'/courses/course/' + (shownCourse.id - 1)"
+      >
+        دوره قبلی
+      </button>
+    </div>
+  </div>
+</div>
+} @else {
+<app-not-found-page></app-not-found-page>
+}

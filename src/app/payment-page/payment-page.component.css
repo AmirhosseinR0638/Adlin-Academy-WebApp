@@ -1,0 +1,243 @@
+div.container {
+  width: 100%;
+  height: 700px;
+  display: flex;
+  flex-flow: column wrap;
+  padding: 60px 0 0 0;
+  align-items: center;
+  justify-content: center;
+  background: #3d7eaa; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #ffe47a,
+    #3d7eaa
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #ffe47a,
+    #3d7eaa
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+div.container div.insideContainer {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  height: 100%;
+}
+div.insideContainer div.information {
+  border: 2px solid #00008b;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background-color: #f5f5f5;
+  width: 30%;
+  height: 535px;
+  padding: 6px 5px;
+  border-left: none;
+}
+div.information h1 {
+  color: #a00e2c;
+  text-align: center;
+  margin: 5px 0;
+}
+div.information h5,
+div.information h3 {
+  margin: 16px 0;
+  font-size: 1.2em;
+  color: #00008b;
+  text-align: center;
+}
+div.information h3 {
+  color: #2e8b57;
+}
+div.information h5 span {
+  color: #ff4500;
+}
+div.information div.divider {
+  width: 98%;
+  margin: 0 auto;
+  height: 3px;
+  border: 2px dashed #a00e2c;
+}
+div.insideContainer div.paymentContainer {
+  width: 35%;
+}
+div.paymentContainer div.logo {
+  width: 100%;
+  height: 135px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: whitesmoke;
+  border-top-left-radius: 8px;
+  border: 2px solid #000080;
+}
+div.logo img {
+  width: 100px;
+  height: 100px;
+}
+div.logo h2 {
+  color: #a00e2c;
+  margin-bottom: 30px;
+}
+div.paymentContainer div.form {
+  width: 100%;
+  height: 400px;
+  padding: 6px 4px;
+  border: 2px solid #000080;
+  border-top: none;
+  border-bottom-left-radius: 8px;
+  background-color: #f5f5ff;
+  display: flex;
+  flex-flow: column wrap;
+}
+div.form div.first {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+div.form form {
+  display: flex;
+  flex-flow: column wrap;
+  margin: 10px 0;
+}
+label {
+  font-size: 0.9em;
+  font-weight: 600;
+}
+input {
+  border-radius: 8px;
+  padding: 3px 6px;
+  border: 2px solid #00008b;
+}
+form div.cardNumber {
+  width: 98%;
+  margin: 6px auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+div.cardNumber input {
+  width: 76%;
+}
+form div.date {
+  width: 98%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+div.date div {
+  width: 46%;
+  margin: 6px auto;
+}
+div.date div.month input,
+div.date div.year input {
+  width: 30%;
+}
+form div.securePassword {
+  padding: 4px 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form div.securePassword div.password {
+  width: 30%;
+  height: 35px;
+  border: 2px solid #000080;
+  border-radius: 8px;
+}
+form div.securePassword div.input {
+  width: 70%;
+}
+div.securePassword div.password img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+form div.passwords {
+  display: flex;
+  flex-flow: column wrap;
+  width: 98%;
+}
+div.passwords div.cvv2 {
+  margin: 6px auto;
+}
+div.passwords div.main {
+  width: 96%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+div.main {
+  width: 100%;
+  margin: 6px auto;
+}
+div.main button {
+  width: 30%;
+  border-radius: 8px;
+  border: 2px solid #000080;
+  font-size: 0.8em;
+  background-color: #7fffd4;
+  padding: 4px 6px;
+  transition: all 0.4s;
+  font-weight: 600;
+}
+div.main button:hover {
+  background-color: #4ecba1;
+  cursor: pointer;
+}
+div.main button:disabled {
+  cursor: not-allowed;
+  color: black;
+  opacity: 0.6;
+}
+form div.email {
+  width: 98%;
+  margin: 10px auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+div.email input {
+  width: 70%;
+}
+form div.btn {
+  width: 98%;
+  margin: 12px auto;
+  display: flex;
+  justify-content: space-around;
+}
+div.btn button {
+  width: 30%;
+  padding: 4px 0;
+  border-radius: 8px;
+  border: 2px solid #000080;
+  font-size: 1.1em;
+  transition: all 0.4s;
+  color: #f5f5f5;
+  cursor: pointer;
+}
+div.btn button:first-child {
+  background-color: #dc143c;
+}
+div.btn button:first-child:hover {
+  background-color: #a00e2c;
+}
+div.btn button:nth-child(2) {
+  background-color: #2e8b57;
+}
+div.btn button:nth-child(2):hover {
+  background-color: #1d5e39;
+}
+div.btn button:nth-child(2):disabled {
+  background-color: #1d5e39;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+input.ng-touched.ng-invalid {
+  border: 2px solid #ff0000;
+}
+input.ng-touched.ng-valid {
+  border: 2px solid #008000;
+}
